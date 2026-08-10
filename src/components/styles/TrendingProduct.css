@@ -4,12 +4,12 @@
   right: 20px;
   bottom: 9px;
 
-  width: 128px;
-  height: 60px;
+  width: 250px;
+  height: 100px;
 
   background: #ffffff;
 
-  border-radius: 9px;
+  border-radius: 10px;
 
   padding: 6px 8px;
 
@@ -24,8 +24,8 @@
 }
 
 .trending-image {
-  width: 35px;
-  height: 40px;
+  width: 85px;
+  height: 70px;
 
   border-radius: 5px;
 
@@ -51,7 +51,7 @@
 .trending-label {
   color: #f15a3c;
 
-  font-size: 8px;
+  font-size: 15px;
   font-weight: 800;
 
   letter-spacing: 0.3px;
@@ -62,7 +62,7 @@
 .trending-info h3 {
   color: #1d2939;
 
-  font-size: 8px;
+  font-size: 15px;
   font-weight: 700;
 
   margin: 0 0 2px;
@@ -73,7 +73,7 @@
 .trending-info strong {
   color: #1769ed;
 
-  font-size: 9px;
+  font-size: 16px;
   font-weight: 700;
 }
 

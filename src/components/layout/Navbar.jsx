@@ -80,6 +80,15 @@ function Navbar() {
           </button>
         </div>
 
+        {/* Mobile Search Button */}
+        <button
+          className="mobile-search-button"
+          onClick={toggleSearch}
+          aria-label="Open search"
+        >
+          {searchOpen ? <X size={22} /> : <Search size={22} />}
+        </button>
+
         {/* Mobile Menu Button */}
         <button
           className="mobile-menu-button"
@@ -89,25 +98,17 @@ function Navbar() {
           {menuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
 
-        <button
-          className="mobile-search-button"
-          onClick={toggleSearch}
-          aria-label="Open search"
-        >
-          {searchOpen ? <X size={22} /> : <Search size={22} />}
-        </button>
       </div>
 
-      {/*Mobile Search*/}
-      <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
-        {/*<div className="mobile-search">
-          <Search size={15} />
+      {/* Mobile Search */}
+      <div className={`mobile-search ${searchOpen ? "open" : ""}`}>
+        <Search size={15} />
 
-          <input
-            type="text"
-            placeholder="Search products..."
-          />
-        </div>*/}
+        <input
+          type="text"
+          placeholder="Search products..."
+          aria-label="Search products"
+        />
       </div>
 
       {/* Mobile Menu */}
