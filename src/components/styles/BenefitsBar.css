@@ -1,4 +1,6 @@
 .benefits-bar {
+  position: relative;
+  top: 50px;
   width: 100%;
 
   background: #ffffff;
@@ -72,6 +74,10 @@
 
 /* Mobile */
 @media (max-width: 520px) {
+  .benefits-bar {
+    top: 0;
+  }
+
   .benefits-container {
     width: calc(100% - 30px);
 

@@ -22,7 +22,7 @@ function Hero() {
       <div className="hero-container">
 
         <div className="hero-content">
-
+ 
           <div className="hero-badge">
             ✦ New Season Collection - SS26
           </div>

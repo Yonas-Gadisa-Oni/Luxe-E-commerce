@@ -191,10 +191,17 @@
 
 .product-details {
   padding: 12px 3px;
+  margin-left: 10px;
+}
+
+.product-details span {
+  color: #666;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .product-details h3 {
-  margin: 0 0 6px;
+  margin-top: 10px;
 
   color: #17243b;
 
@@ -219,6 +226,65 @@
   color: #9aa5b4;
 
   font-size: 11px;
+}
+
+.product-cart {
+  position: absolute;
+
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+
+  z-index: 5;
+
+  /* Hidden by default */
+  opacity: 0;
+  visibility: hidden;
+
+  /* Start slightly lower */
+  transform: translateY(15px);
+
+  /* Smooth animation */
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0.3s ease;
+}
+
+/* When React adds "show" */
+.product-cart.show {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateY(0);
+}
+
+.product-cart button {
+  width: 100%;
+
+  padding: 10px 0;
+
+  border: none;
+  border-radius: 5px;
+
+  background: #cdd4df;
+
+  color: #241f1f;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.product-cart button:hover {
+  background-color: #bfc7d3;
+
+  transform: translateY(-2px);
 }
 
 /* =========================

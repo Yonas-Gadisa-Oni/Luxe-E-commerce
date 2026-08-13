@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Heart,
   ShoppingBag,
@@ -71,9 +72,9 @@ function Navbar() {
             <Heart size={20} />
           </button>
 
-          <button aria-label="Shopping bag">
+          <Link to="/cart" aria-label="Shopping bag">
             <ShoppingBag size={20} />
-          </button>
+          </Link>
 
           <button aria-label="Account">
             <UserRound size={20} />
