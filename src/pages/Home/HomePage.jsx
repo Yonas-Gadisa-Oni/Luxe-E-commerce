@@ -4,6 +4,7 @@ import Hero from "../../components/layout/Hero";
 import BenefitsBar from "../../components/layout/BenefitsBar";
 import CategorySection from "../../components/layout/CategorySection";
 import TrendingSection from "../../components/layout/TrendingSection"; 
+import Footer from "../../components/layout/Footer"
 
 function HomePage() {
   return (
@@ -14,6 +15,7 @@ function HomePage() {
       <BenefitsBar />
       <CategorySection />
       <TrendingSection />
+      <Footer />
     </div>
   );
 }
