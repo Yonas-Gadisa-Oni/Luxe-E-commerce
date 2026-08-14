@@ -9,7 +9,7 @@ function Hero() {
       {/* Background shoe */}
       <div className="hero-background-image">
         <img
-          src="../../../public/images/background-shoes.avif"
+          src="https://images.unsplash.com/photo-1625860191460-10a66c7384fb?w=1400&h=700&fit=crop&auto=format"
           alt=""
           aria-hidden="true"
         />
