@@ -43,7 +43,9 @@ function Navbar() {
             <ShoppingBag size={14} strokeWidth={2.5} />
           </span>
 
-          <span className="logo-text">Luxe</span>
+          <Link to="/" className="logo-text">
+            Luxe
+          </Link>
         </a>
 
         {/* Desktop Navigation */}
