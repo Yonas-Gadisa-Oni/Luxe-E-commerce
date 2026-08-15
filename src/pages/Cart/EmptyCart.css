@@ -153,7 +153,7 @@
 
 @media (max-width: 480px) {
   .empty-cart {
-    top: 20px;
+    top: 50px;
     min-height: 430px;
   }
 

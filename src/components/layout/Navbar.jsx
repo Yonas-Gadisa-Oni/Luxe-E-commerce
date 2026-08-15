@@ -38,15 +38,15 @@ function Navbar() {
       <div className="navbar-container">
 
         {/* Logo */}
-        <a href="#" className="logo">
+        <Link to="/" className="logo">
           <span className="logo-icon">
             <ShoppingBag size={14} strokeWidth={2.5} />
           </span>
 
-          <Link to="/" className="logo-text">
+          <span className="logo-text">
             Luxe
-          </Link>
-        </a>
+          </span>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="desktop-nav">
