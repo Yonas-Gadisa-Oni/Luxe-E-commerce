@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Bank</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Mini Bank</h1>
+
+    <section>
+        <h2>Create Account</h2>
+
+        <input id="nameInput" type="text" placeholder="Enter your name">
+        <button id="createBtn">Create Account</button>
+    </section>
+
+    <section>
+        <h2>Deposit</h2>
+
+        <input id="depositAccount" type="text" placeholder="Account number">
+        <input id="depositAmount" type="number" placeholder="Amount">
+        <button id="depositBtn">Deposit</button>
+    </section>
+
+    <section>
+        <h2>Withdraw</h2>
+
+        <input id="withdrawAccount" type="text" placeholder="Account number">
+        <input id="withdrawAmount" type="number" placeholder="Amount">
+        <button id="withdrawBtn">Withdraw</button>
+    </section>
+
+    <section>
+        <h2>Transfer</h2>
+
+        <input id="senderAccount" type="text" placeholder="Your account number">
+        <input id="receiverAccount" type="text" placeholder="Receiver account number">
+        <input id="transferAmount" type="number" placeholder="Amount">
+
+        <button id="transferBtn">Transfer</button>
+    </section>
+
+    <section>
+        <h2>Check Balance</h2>
+
+        <input id="balanceAccount" type="text" placeholder="Account number">
+        <button id="balanceBtn">Check Balance">
+
+    </section>
+
+    <section>
+        <h2>All Accounts</h2>
+        <button id="showAccountsBtn">Show Accounts</button>
+
+        <div id="accounts"></div>
+    </section>
+
+    <p id="message"></p>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
