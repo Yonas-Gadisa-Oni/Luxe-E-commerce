@@ -1,0 +1,92 @@
+.cart-notification {
+  position: fixed;
+
+  right: 25px;
+  bottom: 25px;
+
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  min-width: 280px;
+  max-width: 380px;
+
+  padding: 14px 18px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+
+  box-shadow: 0 10px 30px rgba(20, 40, 70, 0.15);
+
+  color: #142238;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  animation:
+    notificationSlideIn 0.3s ease forwards,
+    notificationFadeOut 0.4s ease 3.6s forwards;
+}
+
+.notification-icon {
+  width: 28px;
+  height: 28px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #eaf7ef;
+  color: #1d9b52;
+}
+
+.cart-notification.delete .notification-icon {
+  background: #fff0f0;
+  color: #e05252;
+}
+
+@keyframes notificationSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes notificationFadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .cart-notification {
+    right: 15px;
+    bottom: 15px;
+
+    left: 15px;
+
+    min-width: unset;
+    max-width: none;
+
+    font-size: 13px;
+  }
+}

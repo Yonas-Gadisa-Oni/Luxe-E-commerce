@@ -1,0 +1,543 @@
+/* =========================================
+   FLASH SALE SECTION
+========================================= */
+
+.flash-sale {
+  width: 100%;
+
+  background:
+    linear-gradient(
+      110deg,
+      #ff6900 0%,
+      #ff4b1f 48%,
+      #ff2937 100%
+    );
+
+  color: #ffffff;
+
+  padding: 62px 0 61px;
+}
+
+.flash-sale-container {
+  width: min(100% - 40px, 1190px);
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.flash-sale-header {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  margin-bottom: 40px;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.flash-sale-title {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+.flash-sale-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 6px 14px;
+
+  margin-bottom: 12px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.2);
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  line-height: 1;
+}
+
+.flash-icon {
+  font-size: 15px;
+
+  line-height: 1;
+}
+
+.flash-sale-title h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 30px;
+
+  font-weight: 700;
+
+  line-height: 1.15;
+}
+
+.flash-sale-title p {
+  margin: 7px 0 0;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: 15px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   COUNTDOWN
+========================================= */
+
+.flash-countdown {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 8px;
+
+  padding-top: 18px;
+}
+
+.countdown-item {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 5px;
+}
+
+.countdown-number {
+  width: 48px;
+
+  height: 48px;
+
+  border-radius: 12px;
+
+  background: #07172e;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #ffffff;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.countdown-item > span {
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 9px;
+
+  font-weight: 500;
+}
+
+
+/* =========================================
+   PRODUCT GRID
+========================================= */
+
+.flash-products {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 19px;
+}
+
+
+/* =========================================
+   PRODUCT CARD
+========================================= */
+
+.flash-product-card {
+  min-width: 0;
+
+  overflow: hidden;
+
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  color: #0c1b34;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.flash-product-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.14);
+}
+
+
+/* =========================================
+   PRODUCT IMAGE
+========================================= */
+
+.flash-product-image {
+  width: 100%;
+
+  height: 384px;
+
+  overflow: hidden;
+
+  background: #f4f5f7;
+}
+
+.flash-product-image img {
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.flash-product-card:hover
+.flash-product-image img {
+  transform: scale(1.04);
+}
+
+
+/* =========================================
+   PRODUCT INFORMATION
+========================================= */
+
+.flash-product-info {
+  padding: 15px 16px 17px;
+}
+
+.flash-product-brand {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #91a1b8;
+
+  font-size: 12px;
+
+  font-weight: 500;
+}
+
+.flash-product-info h3 {
+  margin: 0;
+
+  color: #0b1a33;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  line-height: 1.3;
+}
+
+
+/* =========================================
+   PRICE ROW
+========================================= */
+
+.flash-product-bottom {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  margin-top: 12px;
+}
+
+.flash-product-price {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.current-price {
+  color: #ff2635;
+
+  font-size: 17px;
+
+  font-weight: 700;
+}
+
+.old-price {
+  color: #9aa9bc;
+
+  font-size: 12px;
+
+  text-decoration: line-through;
+}
+
+.discount {
+  flex-shrink: 0;
+
+  padding: 4px 9px;
+
+  border-radius: 20px;
+
+  background: #fff0f1;
+
+  color: #ff2635;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   LARGE TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .flash-sale {
+    padding: 55px 0;
+  }
+
+  .flash-sale-container {
+    width: min(100% - 35px, 850px);
+  }
+
+  .flash-product-image {
+    height: 300px;
+  }
+
+  .flash-sale-title h2 {
+    font-size: 27px;
+  }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+  .flash-sale {
+    padding: 50px 0;
+  }
+
+  .flash-sale-container {
+    width: calc(100% - 30px);
+  }
+
+  .flash-sale-header {
+    align-items: flex-start;
+
+    gap: 25px;
+
+    margin-bottom: 30px;
+  }
+
+  .flash-sale-title h2 {
+    font-size: 25px;
+  }
+
+  .flash-sale-title p {
+    font-size: 13px;
+  }
+
+  .flash-countdown {
+    gap: 6px;
+
+    padding-top: 12px;
+  }
+
+  .countdown-number {
+    width: 43px;
+
+    height: 43px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+  }
+
+  .flash-products {
+    gap: 13px;
+  }
+
+  .flash-product-image {
+    height: 240px;
+  }
+
+  .flash-product-info {
+    padding: 13px;
+  }
+
+  .flash-product-brand {
+    font-size: 11px;
+  }
+
+  .flash-product-info h3 {
+    font-size: 13px;
+  }
+
+  .current-price {
+    font-size: 15px;
+  }
+
+  .old-price {
+    font-size: 11px;
+  }
+
+  .discount {
+    font-size: 10px;
+
+    padding: 3px 7px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .flash-sale {
+    padding: 40px 0;
+  }
+
+  .flash-sale-container {
+    width: calc(100% - 24px);
+  }
+
+  .flash-sale-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+  }
+
+  .flash-sale-badge {
+    font-size: 11px;
+
+    padding: 6px 11px;
+  }
+
+  .flash-sale-title h2 {
+    font-size: 23px;
+  }
+
+  .flash-sale-title p {
+    margin-top: 5px;
+
+    font-size: 12px;
+  }
+
+  .flash-countdown {
+    padding-top: 0;
+  }
+
+  .countdown-number {
+    width: 42px;
+
+    height: 42px;
+  }
+
+  .flash-products {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+  .flash-product-image {
+    height: 300px;
+  }
+
+  .flash-product-info {
+    padding: 14px 15px 16px;
+  }
+
+  .flash-product-info h3 {
+    font-size: 14px;
+  }
+
+  .current-price {
+    font-size: 17px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .flash-sale-title h2 {
+    font-size: 21px;
+  }
+
+  .flash-sale-title p {
+    font-size: 11px;
+  }
+
+  .countdown-number {
+    width: 39px;
+
+    height: 39px;
+
+    font-size: 13px;
+  }
+
+  .countdown-item > span {
+    font-size: 8px;
+  }
+
+  .flash-product-image {
+    height: 260px;
+  }
+}

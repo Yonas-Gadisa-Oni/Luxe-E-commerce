@@ -1,0 +1,52 @@
+.hero-stats {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+
+  margin-top: 22px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stat-item strong {
+  color: #ffffff;
+
+  font-size: 30px;
+  line-height: 1;
+
+  font-weight: 700;
+}
+
+.stat-item span {
+  color: #9da9bb;
+
+  font-size: 25px;
+  line-height: 1.3;
+
+  font-weight: 400;
+}
+
+@media (max-width: 600px) {
+  .hero-stats {
+    gap: 22px;
+    margin-top: 20px;
+  }
+
+  .stat-item strong {
+    font-size: 12px;
+  }
+
+  .stat-item span {
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-stats {
+    gap: 15px;
+  }
+}
