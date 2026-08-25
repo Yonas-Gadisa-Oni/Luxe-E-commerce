@@ -1,5 +1,3 @@
-import "../styles/HeroStates.css";
-
 function Hero() {
   const stats = [
     {
@@ -17,11 +15,11 @@ function Hero() {
   ];
 
   return (
-    <div className="hero-stats">
+    <div className="mt-[22px] flex items-start gap-7 max-[600px]:mt-5 max-[600px]:gap-[22px] max-[380px]:gap-[15px]">
       {stats.map((stat) => (
-        <div className="stat-item" key={stat.label}>
-          <strong>{stat.value}</strong>
-          <span>{stat.label}</span>
+        <div className="flex flex-col gap-0.5" key={stat.label}>
+          <strong className="text-[30px] font-bold leading-none text-white max-[600px]:text-xs">{stat.value}</strong>
+          <span className="text-[25px] font-normal leading-[1.3] text-[#9da9bb] max-[600px]:text-[7px]">{stat.label}</span>
         </div>
       ))}
     </div>

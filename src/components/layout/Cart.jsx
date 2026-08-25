@@ -1,9 +1,7 @@
-import "../styles/Cart.css";
-
 function Cart() {
   return (
-    <main className="cart-page">
-      <h1>Your Cart</h1>
+    <main className="p-8">
+      <h1 className="text-2xl font-semibold">Your Cart</h1>
 
       <p>Your cart is currently empty.</p>
     </main>

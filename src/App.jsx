@@ -16,7 +16,6 @@ import ProductsPage from "./pages/Products/ProductsPage";
 import ListProductsPage from "./pages/ListProducts/ListProductsPage";
 import AddProduct from "./pages/AddProduct/AddProduct";
 
-import "./App.css";
 
 function App() {
   return (
