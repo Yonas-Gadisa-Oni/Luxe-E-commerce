@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   Heart,
   ShoppingBag,
@@ -16,6 +16,8 @@ import { useHeart } from "../../pages/Heart/useHeart";
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();
   const { cartItems } = useCart();
   const { favoriteItems } = useHeart();
 
@@ -34,6 +36,14 @@ function Navbar() {
   const toggleSearch = () => {
     setSearchOpen((prev) => !prev);
     setMenuOpen(false);
+  };
+
+  const handleSearch = (event) => {
+    event.preventDefault();
+    const normalizedSearch = searchTerm.trim();
+
+    navigate(normalizedSearch ? `/products?search=${encodeURIComponent(normalizedSearch)}` : "/products");
+    setSearchOpen(false);
   };
 
   return (
@@ -61,15 +71,19 @@ function Navbar() {
         </nav>
 
         {/* Search */}
-        <div className="search-box">
+        <form className="search-box" onSubmit={handleSearch} role="search">
           <input
             type="text"
-            placeholder="Search products..."
+            value={searchTerm}
+            onChange={(event) => setSearchTerm(event.target.value)}
+            placeholder="Search products"
             aria-label="Search products"
           />
 
-          <Search size={15} />
-        </div>
+          <button type="submit" aria-label="Search products">
+            <Search size={16} />
+          </button>
+        </form>
 
         {/* Desktop Actions */}
         <div className="nav-actions">
@@ -109,15 +123,20 @@ function Navbar() {
       </div>
 
       {/* Mobile Search */}
-      <div className={`mobile-search ${searchOpen ? "open" : ""}`}>
+      <form className={`mobile-search ${searchOpen ? "open" : ""}`} onSubmit={handleSearch} role="search">
         <Search size={15} />
 
         <input
           type="text"
-          placeholder="Search products..."
+          value={searchTerm}
+          onChange={(event) => setSearchTerm(event.target.value)}
+          placeholder="Search products"
           aria-label="Search products"
         />
-      </div>
+        <button type="submit" aria-label="Search products">
+          <Search size={16} />
+        </button>
+      </form>
 
       {/* Mobile Menu */}
       <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>

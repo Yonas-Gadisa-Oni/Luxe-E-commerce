@@ -108,18 +108,25 @@
 
 .search-box {
   margin-left: 20px;
-  height: 30px;
-  width: 400px;
+  height: 38px;
+  width: min(360px, 30vw);
 
-  border: 2px solid #e1e5eb;
-  border-radius: 5px;
+  border: 1px solid #dfe4eb;
+  border-radius: 999px;
 
   display: flex;
   align-items: center;
 
-  padding: 0 7px;
+  padding: 0 6px 0 14px;
 
-  background: var(--surface);
+  background: #f7f8fa;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.search-box:focus-within {
+  background: #ffffff;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(23, 105, 237, 0.12);
 }
 
 .search-box input {
@@ -131,12 +138,37 @@
 
   background: transparent;
 
-  font-size: 12px;
+  font-size: 13px;
   color: #273142;
 }
 
 .search-box input::placeholder {
   color: var(--muted);
+}
+
+.search-box button,
+.mobile-search button {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #ffffff;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.search-box button:hover,
+.mobile-search button:hover {
+  background: #0f55c7;
+}
+
+.search-box button svg,
+.mobile-search button svg {
+  color: #ffffff;
 }
 
 .search-box svg {
@@ -247,13 +279,13 @@
   left: 10px;
   right: 10px;
 
-  height: 38px;
-  padding: 0 12px;
+  height: 44px;
+  padding: 0 8px 0 14px;
   margin-top: 8px;
 
   background: var(--bg);
   border: 1px solid #e1e5eb;
-  border-radius: 7px;
+  border-radius: 999px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
 
   /* Hidden state (animatable) */
@@ -262,7 +294,7 @@
   pointer-events: none;
   visibility: hidden;
 
-  transition: opacity 1s cubic-bezier(.2,.9,.2,1), transform 1s cubic-bezier(.2,.9,.2,1), visibility 1s linear 1s;
+  transition: opacity 220ms ease, transform 220ms ease, visibility 0ms linear 220ms;
   z-index: 1100;
 }
 
@@ -272,7 +304,7 @@
   transform: translateY(0) scale(1);
   pointer-events: auto;
   visibility: visible;
-  transition: opacity 2s cubic-bezier(.2,.9,.2,1), transform 2s cubic-bezier(.2,.9,.2,1), visibility 0ms linear 0ms;
+  transition: opacity 220ms ease, transform 220ms ease, visibility 0ms linear 0ms;
 }
 
 .mobile-search input {
@@ -291,6 +323,11 @@
 .mobile-search svg {
   color: #8b95a5;
   flex-shrink: 0;
+}
+
+.mobile-search:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(23, 105, 237, 0.12), 0 6px 16px rgba(0, 0, 0, 0.06);
 }
 
 /* =========================
